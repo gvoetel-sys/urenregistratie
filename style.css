@@ -31,77 +31,208 @@ body.light select,body.light input{background:#fff}
 .modal{position:fixed;inset:0;background:#000b;display:flex;align-items:center;justify-content:center;padding:18px;z-index:20}.modal.hidden{display:none}.modal-box{position:relative;width:min(520px,100%);background:var(--card);border:3px solid var(--line);border-radius:24px;padding:20px}.close{position:absolute;right:12px;top:8px;border:0;background:none;color:var(--text);font-size:32px}.modal h2{margin-top:0}
 @media(max-width:520px){main{padding:8px}.card{border-radius:23px;padding:11px}.section-title{font-size:25px}.timer-row{grid-template-columns:1fr 1.15fr 1.15fr}.timer{font-size:20px}.btn{font-size:16px}.manage-row{grid-template-columns:1fr}.project-row{grid-template-columns:1fr 64px}.square{width:64px}.brand{font-size:13px}}
 @media print{.topbar,.tabs,.registration-card,.btn,.icon-btn,.square,.reg-actions{display:none!important}.card{border:0;box-shadow:none}.view{display:block!important}body{background:white;color:black}}
-/* ================================
-   VERBETERDE LICHTE MODUS
-   ================================ */
+/* =========================================
+   LICHTE MODUS - DEFINITIEVE VERSIE
+   ========================================= */
 
 body.light {
   --bg: #eef0f2;
-  --panel: #ffffff;
-  --panel2: #f5f6f7;
-  --text: #171a1f;
-  --muted: #505760;
-  --line: #7b838c;
-  --shadow: 0 8px 20px rgba(0,0,0,.14);
+  --card: #ffffff;
+  --card2: #f4f5f6;
+  --line: #7a828b;
+  --text: #15181c;
+  --muted: #4f565e;
+  --shadow: 0 8px 22px rgba(0,0,0,.12);
+
+  background: #eef0f2 !important;
+  color: #15181c !important;
 }
 
-/* Achtergrond */
-body.light {
-  background: #eef0f2;
-  color: #171a1f;
+/* TOPBAR */
+body.light .topbar {
+  background: #ffffff !important;
+  color: #15181c !important;
 }
 
-/* Alle panelen */
-body.light .card,
-body.light .panel,
-body.light section {
-  background: #ffffff;
-  color: #171a1f;
-  border-color: #7b838c;
+/* KAARTEN / PANELEN */
+body.light .card {
+  background: #ffffff !important;
+  color: #15181c !important;
+  border-color: #7a828b !important;
+  box-shadow: 0 8px 22px rgba(0,0,0,.12) !important;
 }
 
-/* Koppen en teksten */
+/* TITELS */
+body.light .section-title,
+body.light .overview-head,
+body.light .overview-head strong,
 body.light h1,
 body.light h2,
-body.light h3,
-body.light label,
-body.light .reg-title,
-body.light .summary,
-body.light .project-item {
-  color: #171a1f;
+body.light h3 {
+  color: #15181c !important;
 }
 
-/* Secundaire tekst */
-body.light .reg-meta,
-body.light .muted {
-  color: #505760;
+/* LABELS */
+body.light label {
+  color: #4f565e !important;
 }
 
-/* Invoervelden */
+/* INPUTS */
 body.light input,
 body.light select,
 body.light textarea {
-  background: #ffffff;
-  color: #171a1f;
-  border-color: #7b838c;
+  background: #ffffff !important;
+  color: #15181c !important;
+  border-color: #7a828b !important;
 }
 
-/* Handmatig / Notitie / Wis-knoppen */
-body.light .btn:not(.primary),
-body.light button:not(.primary):not(.danger) {
-  background: #e4e7ea;
-  color: #171a1f;
-  border-color: #737b84;
-  box-shadow: 0 3px 8px rgba(0,0,0,.12);
+/* TIMER */
+body.light .timer {
+  background: #f0f2f4 !important;
+  color: #15181c !important;
+  border-color: #7a828b !important;
 }
 
-/* Hover */
-body.light .btn:not(.primary):hover,
-body.light button:not(.primary):not(.danger):hover {
-  background: #d8dce0;
-  color: #111418;
+/* HANDMATIG + NOTITIE */
+body.light .action-row .btn {
+  background: #e3e6e9 !important;
+  color: #15181c !important;
+  border-color: #737b84 !important;
+  box-shadow: 0 3px 8px rgba(0,0,0,.12) !important;
 }
 
+/* HANDMATIG / NOTITIE HOVER */
+body.light .action-row .btn:hover {
+  background: #d7dbe0 !important;
+  color: #111418 !important;
+}
+
+/* START */
+body.light .start {
+  background: linear-gradient(#12ed65,#00b947) !important;
+  color: #071b0d !important;
+  border-color: #22d96c !important;
+}
+
+/* STOP */
+body.light .stop {
+  background: linear-gradient(#ff294b,#d90d30) !important;
+  color: #ffffff !important;
+  border-color: #ff4966 !important;
+}
+
+/* DAG AFSLUITEN */
+body.light #finishDayBtn {
+  background: linear-gradient(#ff294b,#d90d30) !important;
+  color: #ffffff !important;
+  border-color: #ff4966 !important;
+}
+
+/* WIS REGISTRATIES */
+body.light #clearTodayBtn {
+  background: #e3e6e9 !important;
+  color: #15181c !important;
+  border-color: #737b84 !important;
+  box-shadow: 0 3px 8px rgba(0,0,0,.12) !important;
+}
+
+/* PROJECT VERWIJDEREN */
+body.light .danger {
+  color: #ffffff !important;
+}
+
+/* OVERZICHT */
+body.light .stats {
+  border-bottom-color: #d0d4d8 !important;
+}
+
+body.light .stats div {
+  border-right-color: #d0d4d8 !important;
+}
+
+body.light .stats small {
+  color: #4f565e !important;
+}
+
+body.light .stats b {
+  color: #15181c !important;
+}
+
+/* REGISTRATIES */
+body.light .reg {
+  background: #ffffff !important;
+  color: #15181c !important;
+  border-color: #7a828b !important;
+}
+
+body.light .reg-title {
+  color: #15181c !important;
+}
+
+body.light .reg-meta {
+  color: #4f565e !important;
+}
+
+/* MINI KNOPPEN */
+body.light .mini {
+  background: #e3e6e9 !important;
+  color: #15181c !important;
+  border-color: #737b84 !important;
+}
+
+/* PROJECTLIJST */
+body.light .project-item {
+  background: #ffffff !important;
+  color: #15181c !important;
+  border-color: #7a828b !important;
+}
+
+/* SAMENVATTING */
+body.light .summary {
+  color: #4f565e !important;
+}
+
+/* TABS */
+body.light .tab {
+  background: #e3e6e9 !important;
+  color: #15181c !important;
+  border-color: #737b84 !important;
+}
+
+body.light .tab.active {
+  background: linear-gradient(#ff294b,#d90d30) !important;
+  color: #ffffff !important;
+  border-color: #ff4966 !important;
+}
+
+/* THEMA- EN BOVENSTE KNOPPEN */
+body.light .icon-btn,
+body.light .square {
+  background: #e3e6e9 !important;
+  color: #15181c !important;
+  border-color: #737b84 !important;
+}
+
+/* PRULLENBAK / RODE BUTTON */
+body.light .danger {
+  background: linear-gradient(#ff3150,#d70b2c) !important;
+  color: #ffffff !important;
+}
+
+/* MODAL */
+body.light .modal-box {
+  background: #ffffff !important;
+  color: #15181c !important;
+  border-color: #737b84 !important;
+}
+
+body.light .modal-box h2 {
+  color: #15181c !important;
+}
+
+body.light .close {
+  color: #15181c !important;
+}
 /* Timer */
 body.light #timer {
   background: #f1f3f5;
