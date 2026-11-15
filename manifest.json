@@ -1,9 +1,22 @@
 {
-  "name":"Urenregistratie Paneelbouw",
-  "short_name":"Urenregistratie",
-  "start_url":"./index.html",
-  "display":"standalone",
-  "background_color":"#08090b",
-  "theme_color":"#08090b",
-  "lang":"nl"
+  "name": "Urenregistratie Paneelbouw",
+  "short_name": "Urenregistratie",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#eef0f2",
+  "theme_color": "#ed1738",
+  "lang": "nl",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }
